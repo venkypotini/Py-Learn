@@ -17,6 +17,4 @@ t1 = time(2,60)
 
 print(t1.displayTime())
 print(t1.displayMinute())
-
-
-
+print(t1.displayMinute())
