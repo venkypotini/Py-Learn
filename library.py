@@ -11,7 +11,11 @@ class library:
                 print(e)
 
     def addbook(self,serno,bk_name,cost,lang):
-        library.book_dir[self.serno]:{'book_name':self.bk_name, 'cost':self.cost,'lang':self.lang}
+        self.serno = serno
+        self.bk_name = bk_name
+        self.cost = cost
+        self.lang = lang
+        library.book_dir[self.serno] = {library.book_dir[self.serno]['book_name']:self.bk_name, library.book_dir[self.serno]['cost']:self.cost,library.book_dir[self.serno]['lang']:self.lang}
         return library.book_dir
 
 search = library()
