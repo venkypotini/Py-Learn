@@ -15,9 +15,11 @@ class library:
         self.bk_name = bk_name
         self.cost = cost
         self.lang = lang
-        library.book_dir[self.serno] = {library.book_dir[self.serno]['book_name']:self.bk_name, library.book_dir[self.serno]['cost']:self.cost,library.book_dir[self.serno]['lang']:self.lang}
-        return library.book_dir
+        library.book_dir.update({self.serno:{library.book_dir[self.serno]['book_name']:self.bk_name, library.book_dir[self.serno]['cost']:self.cost,library.book_dir[self.serno]['lang']:self.lang}})
+        return library.book_dir[self.serno]
+        # library.book_dir[self.serno] = {library.book_dir[self.serno]['book_name']:self.bk_name, library.book_dir[self.serno]['cost']:self.cost,library.book_dir[self.serno]['lang']:self.lang}
+        # return library.book_dir
 
 search = library()
 print(search.getdetails('Book1'))
-search.addbook(3,'Book3','500','eng')
+print(search.addbook('3','Book3','500','eng'))
