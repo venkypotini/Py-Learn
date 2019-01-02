@@ -3,7 +3,7 @@ class time:
 		self.hours = hours
 		self.mins = mins
 
-	def addTime():
+	def addTime(self,t2):
 		pass
 
 	def displayTime(self):
@@ -14,6 +14,8 @@ class time:
 
 
 t1 = time(2,60)
+t2 = time(1,20)
+t1.addTime(t2)
 
 print(t1.displayTime())
 print(t1.displayMinute())
